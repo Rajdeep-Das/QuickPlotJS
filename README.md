@@ -1,20 +1,20 @@
 # QuickPlot.js
 A pure JavaScript library that plots math functions on an HTML5 canvas. Quick, fast, no bullshit. Use as you please. Used to make [Mathgifs](http://nwoodthorpe.com/mathgif/).
 
-##Features
+## Features
 
-###Fast
+### Fast
 Other popular math plotting libraries will plot a math function(300x300 canvas) in 50-150 ms.
 
 QuickPlot.js plots in **_2-5 ms_**. 
 
-###Lightweight
+### Lightweight
 The minified version of QuickPlot.js is **_4 kb_**. If all you need is a simple plot, there's no need to bog down your web-app with a 300kb feature-rich API.
 
-###Simple
+### Simple
 With only a few critical functions and a detailed How-To, QuickPlot.js is simple enough for anyone to use, regardless of experience in JavaScript.
 
-##How-To
+## How-To
 Start with defining a canvas in HTML. This canvas must have an id, or be identifiable from JavaScript in some other way. We also need to include QuickPlot.js (save to local).
 ```html
   <body>
@@ -41,10 +41,10 @@ When you want to draw your function plot to the canvas, call `quickplot.drawGrap
 
 That's it! 
 
-##Documentation
+## Documentation
 QuickPlot.js features several getters and setters to make using this API easier and more customizable. All of these getters and setters are documented below. This API introduces only one global variable, `QuickPlot`.
 
-###Main Functions
+### Main Functions
 **.drawGraph()**
   
 Draws the function plot to the canvas. Requires function, domain and range have all been set by `.setFunctionLambda`, `.setGraphDomain`, and `.setGraphRange` respectively. Will print an error to the console if drawing fails.
@@ -53,7 +53,7 @@ Draws the function plot to the canvas. Requires function, domain and range have 
 
 Updates internal canvas width and height used for calculating plot coordinates. Must be called any time the canvas width or height is modified. If redraw==true, canvas will be redrawn.
 
-###Setters
+### Setters
 **.setDrawAxis(enabled)**
 
 Enables or disables drawing of the x and y axis. Enabled by default.
@@ -86,7 +86,7 @@ Sets the range the function should be plotted on. This range is bounded by the c
 
 Sets the function to be plotted. Must be inputted as a JavaScript lambda with one x parameter. e.g. `.setFunction(function(x){return Math.sin(x)});`. To use a string function, see https://github.com/silentmatt/js-expression-eval/tree/master
 
-###Getters
+### Getters
 
 **.getDrawAxis()**
 
@@ -120,5 +120,5 @@ Returns object corresponding to range of the function.
 
 Returns the current lambda set to be graphed.
 
-##Conclusion
+## Conclusion
 If you find a bug, please post an issue. Feel free to fork or make a pull request if you want to modify. :)
